@@ -7,8 +7,7 @@ import ReactNative, {
   StyleSheet,
   ScrollView,
   Dimensions,
-  TextInput,
-  ViewPropTypes,
+  TextInput
 } from "react-native";
 
 import CreditCard from "./CardView";
@@ -50,7 +49,7 @@ export default class CreditCardInput extends Component {
 
     labelStyle: Text.propTypes.style,
     inputStyle: Text.propTypes.style,
-    inputContainerStyle: ViewPropTypes.style,
+    inputContainerStyle: PropTypes.any,
 
     validColor: PropTypes.string,
     invalidColor: PropTypes.string,

@@ -5,8 +5,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  ViewPropTypes,
+  StyleSheet
 } from "react-native";
 
 const s = StyleSheet.create({
@@ -25,7 +24,7 @@ export default class CCInput extends Component {
 
     status: PropTypes.oneOf(["valid", "invalid", "incomplete"]),
 
-    containerStyle: ViewPropTypes.style,
+    containerStyle: PropTypes.any,
     inputStyle: Text.propTypes.style,
     labelStyle: Text.propTypes.style,
     validColor: PropTypes.string,
@@ -60,7 +59,7 @@ export default class CCInput extends Component {
   //   if (value !== "" && newValue === "") onBecomeEmpty(field);
   //   if (status !== "valid" && newStatus === "valid") onBecomeValid(field);
   // };
-  
+
   componentDidUpdate(prevProps, prevState, snapshot) {
     const { status, value, onBecomeEmpty, onBecomeValid, field } = prevProps;
     const { status: newStatus, value: newValue } = this.props;
